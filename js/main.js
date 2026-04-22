@@ -92,14 +92,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // 3. Hero Slider (Homepage Only)
   // ==========================================
-  const heroSlider = document.getElementById('heroSlider');
+  const heroSlider = document.querySelector('.hero-slider');
   if (heroSlider) {
     const sliderTrack = heroSlider.querySelector('.slider-track');
     const slides = heroSlider.querySelectorAll('.slide');
     const dots = heroSlider.querySelectorAll('.dot');
     let currentSlide = 0;
     let sliderInterval;
-    const SLIDE_DURATION = 8500; // 8.5 seconds
+    const SLIDE_DURATION = 5500; // 5.5 seconds
     const totalSlides = slides.length;
 
     function goToSlide(index) {
