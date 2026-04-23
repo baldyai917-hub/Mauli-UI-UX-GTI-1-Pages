@@ -102,48 +102,56 @@ document.addEventListener('DOMContentLoaded', () => {
     const SLIDE_DURATION = 5500; // 5.5 seconds
     const totalSlides = slides.length;
 
-    function goToSlide(index) {
-      // Update dots
-      dots[currentSlide].classList.remove('active');
-      currentSlide = index;
-      dots[currentSlide].classList.add('active');
-
-      // Slide the track horizontally
-      const offset = -(currentSlide * (100 / totalSlides));
-      sliderTrack.style.transform = `translateX(${offset}%)`;
-    }
-
-    function nextSlide() {
-      const next = (currentSlide + 1) % totalSlides;
-      goToSlide(next);
-    }
-
-    // Start auto-play
-    function startAutoPlay() {
-      sliderInterval = setInterval(nextSlide, SLIDE_DURATION);
-    }
-
-    function stopAutoPlay() {
-      clearInterval(sliderInterval);
-    }
-
-    startAutoPlay();
-
-    // Pause on hover
-    heroSlider.addEventListener('mouseenter', stopAutoPlay);
-    heroSlider.addEventListener('mouseleave', startAutoPlay);
-
-    // Dot click navigation
-    dots.forEach(dot => {
-      dot.addEventListener('click', () => {
-        const slideIndex = parseInt(dot.getAttribute('data-slide'));
-        if (slideIndex !== currentSlide) {
-          stopAutoPlay();
-          goToSlide(slideIndex);
-          startAutoPlay();
+    if (totalSlides > 1) {
+      function goToSlide(index) {
+        // Update dots
+        if (dots.length > 0) {
+          dots[currentSlide].classList.remove('active');
         }
-      });
-    });
+        currentSlide = index;
+        if (dots.length > 0) {
+          dots[currentSlide].classList.add('active');
+        }
+
+        // Slide the track horizontally
+        const offset = -(currentSlide * (100 / totalSlides));
+        sliderTrack.style.transform = `translateX(${offset}%)`;
+      }
+
+      function nextSlide() {
+        const next = (currentSlide + 1) % totalSlides;
+        goToSlide(next);
+      }
+
+      // Start auto-play
+      function startAutoPlay() {
+        sliderInterval = setInterval(nextSlide, SLIDE_DURATION);
+      }
+
+      function stopAutoPlay() {
+        clearInterval(sliderInterval);
+      }
+
+      startAutoPlay();
+
+      // Pause on hover
+      heroSlider.addEventListener('mouseenter', stopAutoPlay);
+      heroSlider.addEventListener('mouseleave', startAutoPlay);
+
+      // Dot click navigation
+      if (dots.length > 0) {
+        dots.forEach(dot => {
+          dot.addEventListener('click', () => {
+            const slideIndex = parseInt(dot.getAttribute('data-slide'));
+            if (slideIndex !== currentSlide) {
+              stopAutoPlay();
+              goToSlide(slideIndex);
+              startAutoPlay();
+            }
+          });
+        });
+      }
+    }
   }
 
   // ==========================================
