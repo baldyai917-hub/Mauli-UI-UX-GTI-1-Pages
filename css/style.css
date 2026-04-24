@@ -182,7 +182,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 45px;
+  height: 80px;
 }
 
 .logo-wrapper {
@@ -864,3 +864,4 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px; /* Offset for fixed header */
 }
+
