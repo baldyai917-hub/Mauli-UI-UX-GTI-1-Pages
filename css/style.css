@@ -102,6 +102,10 @@ p {
   background-color: #E8F0F8;
 }
 
+.section-wave-bg {
+  padding-bottom: 8rem; /* Add extra space above the wave */
+}
+
 .section-bg-dark {
   background-color: var(--color-primary);
   color: var(--color-white);
