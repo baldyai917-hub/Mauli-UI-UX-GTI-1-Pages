@@ -2,18 +2,22 @@
    CSS Variables & Tokens
    ========================================================================== */
 :root {
-  /* Colors */
-  --color-primary: #0A1628; /* Deep Navy */
-  --color-secondary: #0E7490; /* Ocean Teal */
-  --color-accent: #22D3EE; /* Aqua Blue */
-  --color-neutral-light: #F8FAFC; /* Soft White */
+  /* Colors - GTI Brand Guidelines (60·30·8·2 Rule) */
+  --color-primary: #0F2B6B; /* Tirta Deep - Authority & Depth (8%) */
+  --color-secondary: #1E5AA8; /* Wave Blue - Primary Brand Color (30%) */
+  --color-accent: #3B82C4; /* Sky Flow - Highlight & Accent */
+  --color-neutral-light: #F6F2EB; /* Paper (60%) */
   --color-neutral: #64748B; /* Slate Gray */
-  --color-text: #1E293B; /* Dark Charcoal */
+  --color-text: #1B1B2E; /* Ink */
   --color-white: #FFFFFF;
   --color-border: #E2E8F0;
+  --color-paper-deep: #EFE8DC; /* Paper Deep */
+  --color-ink-soft: #1A2A44; /* Ink Soft */
+  --color-silver: #A8B2BD; /* Silver - Editorial Accent (2%) */
   
   /* Typography */
-  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-main: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
   
   /* Shadow & Radius */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -73,10 +77,16 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
   line-height: 1.2;
   font-weight: 700;
   color: var(--color-primary);
   margin-bottom: 1rem;
+}
+
+h3, h4, h5, h6 {
+  font-family: var(--font-main);
+  font-weight: 600;
 }
 
 p {
@@ -89,7 +99,7 @@ p {
 }
 
 .section-bg-light {
-  background-color: var(--color-neutral-light);
+  background-color: #E8F0F8;
 }
 
 .section-bg-dark {
@@ -140,7 +150,7 @@ p {
 }
 
 .btn-primary:hover {
-  background-color: #0c6178;
+  background-color: #164a8a;
   color: var(--color-white);
   transform: translateY(-2px);
 }
@@ -182,7 +192,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 90px;
 }
 
 .logo-wrapper {
@@ -191,7 +201,7 @@ p {
 }
 
 .logo-wrapper img {
-  height: 45px;
+  height: 72px;
   width: auto;
 }
 
@@ -310,7 +320,7 @@ p {
 .hero-slider {
   position: relative;
   width: 100%;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 90px);
   min-height: 500px;
   overflow: hidden;
 }
@@ -331,7 +341,7 @@ p {
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
 }
 
@@ -341,18 +351,19 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(10, 22, 40, 0.85) 0%, rgba(10, 22, 40, 0.7) 40%, rgba(14, 116, 144, 0.6) 100%);
-  backdrop-filter: grayscale(100%);
-  -webkit-backdrop-filter: grayscale(100%);
+  background: linear-gradient(to right, rgba(15, 43, 107, 0.88) 0%, rgba(15, 43, 107, 0.75) 35%, rgba(30, 90, 168, 0.50) 65%, rgba(30, 90, 168, 0.40) 100%);
+  backdrop-filter: grayscale(60%);
+  -webkit-backdrop-filter: grayscale(60%);
   z-index: 1;
 }
 
 .slide-content {
   position: relative;
   z-index: 2;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
+  max-width: 780px;
+  margin: 0;
+  margin-left: 5%;
+  text-align: left;
   padding: 0 2rem;
 }
 
@@ -368,9 +379,7 @@ p {
   margin-bottom: 2.5rem;
   color: #CBD5E1;
   font-weight: 400;
-  max-width: 850px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 650px;
 }
 
 /* Slider Dot Navigation */
@@ -426,7 +435,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(10, 22, 40, 0.75) 0%, rgba(10, 22, 40, 0.85) 100%);
+  background: linear-gradient(135deg, rgba(15, 43, 107, 0.75) 0%, rgba(15, 43, 107, 0.85) 100%);
   z-index: 1;
 }
 
@@ -438,7 +447,7 @@ p {
   right: -10%;
   width: 60%;
   height: 100%;
-  background-image: radial-gradient(circle at 100% 50%, rgba(34, 211, 238, 0.08) 0%, transparent 60%);
+  background-image: radial-gradient(circle at 100% 50%, rgba(59, 130, 196, 0.08) 0%, transparent 60%);
   z-index: 1;
 }
 
@@ -552,11 +561,12 @@ p {
 }
 
 .card-icon {
-  width: 48px;
-  height: 48px;
-  background-color: rgba(14, 116, 144, 0.1);
+  width: 64px;
+  height: 64px;
+  background: transparent;
   color: var(--color-secondary);
-  border-radius: var(--radius-md);
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -685,7 +695,7 @@ p {
 .form-control:focus {
   outline: none;
   border-color: var(--color-secondary);
-  box-shadow: 0 0 0 3px rgba(14, 116, 144, 0.1);
+  box-shadow: 0 0 0 3px rgba(30, 90, 168, 0.15);
 }
 
 textarea.form-control {
@@ -697,7 +707,7 @@ textarea.form-control {
    Footer
    ========================================================================== */
 .footer {
-  background-color: #050B14; /* Darker Navy */
+  background-color: #0A1A3E; /* Tirta Deep darker */
   color: rgba(255, 255, 255, 0.7);
   padding: 5rem 0 2rem;
 }
@@ -710,9 +720,8 @@ textarea.form-control {
 }
 
 .footer-logo {
-  height: 35px;
+  height: 60px;
   margin-bottom: 1.5rem;
-  filter: brightness(0) invert(1);
 }
 
 .footer-desc {
@@ -862,8 +871,217 @@ textarea.form-control {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px; /* Offset for fixed header */
+  scroll-padding-top: 90px; /* Offset for fixed header */
 }
 
+/* ==========================================================================
+   Wave Divider - Brand Element (inspired by GTI logo waves)
+   ========================================================================== */
+.wave-divider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
 
+.wave-divider svg {
+  display: block;
+  width: 100%;
+  height: 80px;
+}
 
+.wave-divider-bottom {
+  margin-top: -1px;
+}
+
+.wave-divider-top {
+  margin-bottom: -1px;
+  transform: rotate(180deg);
+}
+
+/* Wave background decoration for sections */
+.section-wave-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-wave-bg::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -5%;
+  width: 110%;
+  height: 120px;
+  background: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath d='M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60' fill='none' stroke='rgba(30,90,168,0.08)' stroke-width='2'/%3E%3Cpath d='M0,80 C240,110 480,40 720,80 C960,110 1200,40 1440,80' fill='none' stroke='rgba(59,130,196,0.06)' stroke-width='1.5'/%3E%3Cpath d='M0,100 C240,115 480,65 720,100 C960,115 1200,65 1440,100' fill='none' stroke='rgba(59,130,196,0.04)' stroke-width='1'/%3E%3C/svg%3E") no-repeat center;
+  background-size: cover;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section-wave-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   Distributor Cards - Trust Bar
+   ========================================================================== */
+.distributor-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.distributor-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 3rem;
+  border-radius: var(--radius-lg);
+  min-width: 240px;
+  min-height: 90px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.distributor-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.distributor-card img {
+  max-height: 55px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+/* ==========================================================================
+   Role Grid - Peran Kami (2x2 layout for 4 items)
+   ========================================================================== */
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.role-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.role-card .card-icon {
+  margin: 0 auto 1.25rem;
+  width: 72px;
+  height: 72px;
+  font-size: 1.5rem;
+}
+
+.role-card h4 {
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.role-card p {
+  font-size: 0.9rem;
+  color: var(--color-neutral);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .role-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .distributor-grid {
+    gap: 1.5rem;
+  }
+  .distributor-card {
+    min-width: 180px;
+    padding: 1.25rem 2rem;
+  }
+  .advantage-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Advantage Grid - Mengapa Memilih Kami (Icon + Text rows)
+   ========================================================================== */
+.advantage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.advantage-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.75rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(30, 90, 168, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.advantage-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(30, 90, 168, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Center the 5th (last odd) item */
+.advantage-item:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.advantage-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.advantage-text h4 {
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-primary);
+  margin-bottom: 0.4rem;
+}
+
+.advantage-text p {
+  font-size: 0.9rem;
+  color: var(--color-neutral);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .advantage-grid {
+    grid-template-columns: 1fr;
+  }
+  .advantage-item:last-child:nth-child(odd) {
+    max-width: 100%;
+  }
+}

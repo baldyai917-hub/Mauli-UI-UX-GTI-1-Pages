@@ -8,7 +8,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -18,7 +18,7 @@
   <header class="header">
     <div class="container nav-container">
       <a href="#home" class="logo-wrapper">
-        <img src="assets/images/logo-gti.png" alt="GTI Logo">
+        <img src="assets/images/main_logo.png" alt="GTI Logo">
       </a>
       
       <nav class="nav-menu">
@@ -52,7 +52,7 @@
   <section class="hero-slider" id="home">
     <div class="slider-track">
       <!-- Slide 1 -->
-      <div class="slide" style="background-image: url('assets/benner/2-1-1536x1024.jpg');">
+      <div class="slide" style="background-image: url('assets/benner/benner_GTI.png');">
         <div class="slide-overlay"></div>
         <div class="container slide-content">
           <h1 class="hero-title" data-lang-id="Menghadirkan Teknologi Air Berkualitas Global dengan Keahlian Lokal" data-lang-en="Bridging Global Water Technologies with Local Excellence">Menghadirkan Teknologi Air Berkualitas Global dengan Keahlian Lokal</h1>
@@ -69,12 +69,16 @@
   <section class="section" style="padding: 2rem 0; border-bottom: 1px solid #E2E8F0; background-color: var(--color-white);">
     <div class="container text-center fade-in">
       <p style="font-weight: 500; color: var(--color-text-light); margin-bottom: 1.5rem;" data-lang-id="Dipercaya produsen global, didukung oleh jaringan distribusi nasional yang terbukti." data-lang-en="Trusted by global manufacturers, supported by a proven nationwide distribution network.">Dipercaya produsen global, didukung oleh jaringan distribusi nasional yang terbukti.</p>
-      <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; opacity: 0.6;">
-        <!-- Placeholders for logos as requested by Mauli -->
-        <div style="font-weight: bold; font-size: 1.5rem; color: #94A3B8;">[ LOGO 1 ]</div>
-        <div style="font-weight: bold; font-size: 1.5rem; color: #94A3B8;">[ LOGO 2 ]</div>
-        <div style="font-weight: bold; font-size: 1.5rem; color: #94A3B8;">[ LOGO 3 ]</div>
-        <div style="font-weight: bold; font-size: 1.5rem; color: #94A3B8;">[ LOGO 4 ]</div>
+      <div class="distributor-grid">
+        <a href="https://grundfos.bentengmasperkasa.com/" target="_blank" rel="noopener noreferrer" class="distributor-card" style="background-color: #1E4A7D;">
+          <img src="assets/Logo distributor/grundfos-white.png" alt="Grundfos">
+        </a>
+        <a href="https://emaux.bentengmasperkasa.com/" target="_blank" rel="noopener noreferrer" class="distributor-card" style="background-color: #588AAA;">
+          <img src="assets/Logo distributor/emaux.png" alt="Emaux Water Technology">
+        </a>
+        <a href="#" class="distributor-card" style="background-color: #FFFFFF; border: 1px solid #E2E8F0;">
+          <img src="assets/Logo distributor/pool-bright.png" alt="PoolBright">
+        </a>
       </div>
     </div>
   </section>
@@ -83,7 +87,7 @@
 
   <div id="about">
 <!-- Company Profile -->
-  <section class="section">
+  <section class="section section-wave-bg">
     <div class="container fade-in">
       <div class="grid-2">
         <div>
@@ -95,30 +99,49 @@
     </div>
   </section>
 
+  <!-- Wave Divider: White → Blue Section -->
+  <div class="wave-divider wave-divider-bottom">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#1a4a7e;stop-opacity:0.15" />
+          <stop offset="100%" style="stop-color:#3B82C4;stop-opacity:0.12" />
+        </linearGradient>
+      </defs>
+      <path d="M0,60 C360,20 720,80 1080,40 C1260,25 1380,30 1440,50 L1440,80 L0,80 Z" fill="#E8F0F8"/>
+      <path d="M0,50 C300,75 600,15 900,45 C1100,60 1300,55 1440,45" fill="none" stroke="rgba(30,90,168,0.18)" stroke-width="2"/>
+      <path d="M0,58 C300,78 600,28 900,55 C1100,65 1300,60 1440,52" fill="none" stroke="rgba(59,130,196,0.10)" stroke-width="1.5"/>
+    </svg>
+  </div>
+
   <!-- Strategic Role -->
-  <section class="section section-bg-light">
+  <section class="section" style="background-color: #E8F0F8;">
     <div class="container fade-in">
       <div class="text-center" style="max-width: 800px; margin: 0 auto 3rem;">
         <h2 class="text-primary" data-lang-id="Peran Kami" data-lang-en="Our Role">Peran Kami</h2>
         <p data-lang-id="Kami mengelola aspek-aspek utama yang dibutuhkan untuk menjamin representasi pasar yang kredibel di Indonesia:" data-lang-en="We manage the key elements required for a proper market presence in Indonesia:">Kami mengelola aspek-aspek utama yang dibutuhkan untuk menjamin representasi pasar yang kredibel di Indonesia:</p>
       </div>
 
-      <div class="grid-4">
-        <div class="card fade-in delay-1">
+      <div class="role-grid">
+        <div class="role-card fade-in delay-1">
           <div class="card-icon"><i class="fa-solid fa-file-signature fa-lg"></i></div>
-          <p style="font-weight: 500; font-size: 1.1rem; color: var(--color-primary);" data-lang-id="Mengamankan dan mengelola lisensi merek dagang eksklusif" data-lang-en="Securing and managing exclusive trademark licenses">Mengamankan dan mengelola lisensi merek dagang eksklusif</p>
+          <h4 data-lang-id="Lisensi Merek Dagang" data-lang-en="Trademark Licensing">Lisensi Merek Dagang</h4>
+          <p data-lang-id="Mengamankan dan mengelola lisensi merek dagang eksklusif" data-lang-en="Securing and managing exclusive trademark licenses">Mengamankan dan mengelola lisensi merek dagang eksklusif</p>
         </div>
-        <div class="card fade-in delay-2">
+        <div class="role-card fade-in delay-2">
+          <div class="card-icon"><i class="fa-solid fa-scale-balanced fa-lg"></i></div>
+          <h4 data-lang-id="Kepatuhan Regulasi" data-lang-en="Regulatory Compliance">Kepatuhan Regulasi</h4>
+          <p data-lang-id="Memastikan kepatuhan regulasi dan penyelarasan sertifikasi" data-lang-en="Ensuring regulatory compliance and certification">Memastikan kepatuhan regulasi dan penyelarasan sertifikasi</p>
+        </div>
+        <div class="role-card fade-in delay-3">
           <div class="card-icon"><i class="fa-solid fa-circle-check fa-lg"></i></div>
-          <p style="font-weight: 500; font-size: 1.1rem; color: var(--color-primary);" data-lang-id="Memastikan kepatuhan regulasi dan penyelarasan sertifikasi" data-lang-en="Ensuring regulatory compliance and certification">Memastikan kepatuhan regulasi dan penyelarasan sertifikasi</p>
+          <h4 data-lang-id="Keaslian Merek" data-lang-en="Brand Authenticity">Keaslian Merek</h4>
+          <p data-lang-id="Menjaga keaslian serta reputasi merek" data-lang-en="Safeguarding brand authenticity and reputation">Menjaga keaslian serta reputasi merek</p>
         </div>
-        <div class="card fade-in delay-3">
-          <div class="card-icon"><i class="fa-solid fa-shield-halved fa-lg"></i></div>
-          <p style="font-weight: 500; font-size: 1.1rem; color: var(--color-primary);" data-lang-id="Menjaga keaslian serta reputasi merek" data-lang-en="Safeguarding brand authenticity and reputation">Menjaga keaslian serta reputasi merek</p>
-        </div>
-        <div class="card fade-in delay-4">
-          <div class="card-icon"><i class="fa-solid fa-people-arrows fa-lg"></i></div>
-          <p style="font-weight: 500; font-size: 1.1rem; color: var(--color-primary);" data-lang-id="Mendukung distribusi produk resmi melalui PT Benteng Mas Perkasa" data-lang-en="Supporting official product distribution through PT Benteng Mas Perkasa">Mendukung distribusi produk resmi melalui PT Benteng Mas Perkasa</p>
+        <div class="role-card fade-in delay-4">
+          <div class="card-icon"><i class="fa-solid fa-truck-fast fa-lg"></i></div>
+          <h4 data-lang-id="Distribusi Resmi" data-lang-en="Official Distribution">Distribusi Resmi</h4>
+          <p data-lang-id="Mendukung distribusi produk resmi melalui PT Benteng Mas Perkasa" data-lang-en="Supporting official product distribution through PT Benteng Mas Perkasa">Mendukung distribusi produk resmi melalui PT Benteng Mas Perkasa</p>
         </div>
       </div>
       
@@ -126,38 +149,72 @@
     </div>
   </section>
 
+  <!-- Wave Divider: Blue Section → White -->
+  <div class="wave-divider wave-divider-top">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,60 C360,20 720,80 1080,40 C1260,25 1380,30 1440,50 L1440,80 L0,80 Z" fill="#E8F0F8"/>
+      <path d="M0,50 C300,75 600,15 900,45 C1100,60 1300,55 1440,45" fill="none" stroke="rgba(30,90,168,0.18)" stroke-width="2"/>
+    </svg>
+  </div>
+
     </div>
 
 <div id="why-us">
-  <!-- 5 Advantage Cards -->
-  <section class="section section-bg-light">
+  <!-- 5 Advantages - Clean Icon Grid -->
+  <section class="section" style="background: linear-gradient(180deg, #E8F0F8 0%, #dce8f5 100%);">
     <div class="container fade-in">
       <h2 class="section-title" data-lang-id="Mengapa Memilih Kami" data-lang-en="Why Work With Us">Mengapa Memilih Kami</h2>
-      <div class="grid-3">
-        <!-- Card 1 -->
-        <div class="card">
-          <h3 class="card-title text-secondary" data-lang-id="Terpercaya Sejak 1987" data-lang-en="Trusted Foundation Since 1987">Terpercaya Sejak 1987</h3>
-          <p data-lang-id="Didukung oleh rekam jejak dari PT Benteng Mas Perkasa." data-lang-en="Backed by the legacy and expertise of PT Benteng Mas Perkasa.">Didukung oleh rekam jejak dari PT Benteng Mas Perkasa.</p>
+      
+      <div class="advantage-grid">
+        <!-- Item 1 -->
+        <div class="advantage-item fade-in delay-1">
+          <div class="advantage-icon">
+            <i class="fa-solid fa-building-columns"></i>
+          </div>
+          <div class="advantage-text">
+            <h4 data-lang-id="Terpercaya Sejak 1987" data-lang-en="Trusted Foundation Since 1987">Terpercaya Sejak 1987</h4>
+            <p data-lang-id="Didukung oleh rekam jejak dari PT Benteng Mas Perkasa." data-lang-en="Backed by the legacy and expertise of PT Benteng Mas Perkasa.">Didukung oleh rekam jejak dari PT Benteng Mas Perkasa.</p>
+          </div>
         </div>
-        <!-- Card 2 -->
-        <div class="card delay-1">
-          <h3 class="card-title text-secondary" data-lang-id="Pemegang Lisensi Merek Eksklusif" data-lang-en="Exclusive Brand Licensing">Pemegang Lisensi Merek Eksklusif</h3>
-          <p data-lang-id="Pemegang hak resmi distribusi bagi merek-merek teknologi air internasional berkualitas tinggi." data-lang-en="Official rights to represent premium international water technology brands.">Pemegang hak resmi distribusi bagi merek-merek teknologi air internasional berkualitas tinggi.</p>
+        <!-- Item 2 -->
+        <div class="advantage-item fade-in delay-2">
+          <div class="advantage-icon">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <div class="advantage-text">
+            <h4 data-lang-id="Pemegang Lisensi Merek Eksklusif" data-lang-en="Exclusive Brand Licensing">Pemegang Lisensi Merek Eksklusif</h4>
+            <p data-lang-id="Pemegang hak resmi distribusi bagi merek-merek teknologi air internasional berkualitas tinggi." data-lang-en="Official rights to represent premium international water technology brands.">Pemegang hak resmi distribusi bagi merek-merek teknologi air internasional berkualitas tinggi.</p>
+          </div>
         </div>
-        <!-- Card 3 -->
-        <div class="card delay-2">
-          <h3 class="card-title text-secondary" data-lang-id="Keaslian Produk Terjamin" data-lang-en="Guaranteed Authenticity">Keaslian Produk Terjamin</h3>
-          <p data-lang-id="Kami memasok seluruh produk langsung dari pabrikan resmi." data-lang-en="Every product is sourced directly from authorized manufacturers.">Kami memasok seluruh produk langsung dari pabrikan resmi.</p>
+        <!-- Item 3 -->
+        <div class="advantage-item fade-in delay-3">
+          <div class="advantage-icon">
+            <i class="fa-solid fa-stamp"></i>
+          </div>
+          <div class="advantage-text">
+            <h4 data-lang-id="Keaslian Produk Terjamin" data-lang-en="Guaranteed Authenticity">Keaslian Produk Terjamin</h4>
+            <p data-lang-id="Kami memasok seluruh produk langsung dari pabrikan resmi." data-lang-en="Every product is sourced directly from authorized manufacturers.">Kami memasok seluruh produk langsung dari pabrikan resmi.</p>
+          </div>
         </div>
-        <!-- Card 4 -->
-        <div class="card">
-          <h3 class="card-title text-secondary" data-lang-id="Dukungan Resmi dari Produsen" data-lang-en="Full Manufacturer Support">Dukungan Resmi dari Produsen</h3>
-          <p data-lang-id="Produk didukung oleh garansi, dokumentasi, dan keahlian teknis." data-lang-en="Products are supported by warranties, documentation, and technical expertise.">Produk didukung oleh garansi, dokumentasi, dan keahlian teknis.</p>
+        <!-- Item 4 -->
+        <div class="advantage-item fade-in delay-1">
+          <div class="advantage-icon">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <div class="advantage-text">
+            <h4 data-lang-id="Dukungan Resmi dari Produsen" data-lang-en="Full Manufacturer Support">Dukungan Resmi dari Produsen</h4>
+            <p data-lang-id="Produk didukung oleh garansi, dokumentasi, dan keahlian teknis." data-lang-en="Products are supported by warranties, documentation, and technical expertise.">Produk didukung oleh garansi, dokumentasi, dan keahlian teknis.</p>
+          </div>
         </div>
-        <!-- Card 5 -->
-        <div class="card delay-1">
-          <h3 class="card-title text-secondary" data-lang-id="Reputasi Industri yang Kuat" data-lang-en="Industry Credibility">Reputasi Industri yang Kuat</h3>
-          <p data-lang-id="Mitra yang dapat diandalkan, baik oleh produsen mancanegara maupun pelanggan domestik." data-lang-en="A reliable partner for both global manufacturers and local markets.">Mitra yang dapat diandalkan, baik oleh produsen mancanegara maupun pelanggan domestik.</p>
+        <!-- Item 5 -->
+        <div class="advantage-item fade-in delay-2">
+          <div class="advantage-icon">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <div class="advantage-text">
+            <h4 data-lang-id="Reputasi Industri yang Kuat" data-lang-en="Industry Credibility">Reputasi Industri yang Kuat</h4>
+            <p data-lang-id="Mitra yang dapat diandalkan, baik oleh produsen mancanegara maupun pelanggan domestik." data-lang-en="A reliable partner for both global manufacturers and local markets.">Mitra yang dapat diandalkan, baik oleh produsen mancanegara maupun pelanggan domestik.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -333,7 +390,7 @@
     <div class="container">
       <div class="footer-top fade-in">
         <div class="footer-info">
-          <img src="assets/images/logo-gti.png" alt="GTI Logo" class="footer-logo">
+          <img src="assets/images/white logo.png" alt="GTI Logo" class="footer-logo">
           <p class="footer-desc" data-lang-id="PT Gemilang Tirta Internusa berspesialisasi dalam sistem pompa air industri dan solusi teknologi air distribusi premium di Indonesia. Produk dijamin asli, andal, dan didukung penuh." data-lang-en="PT Gemilang Tirta Internusa specializes in water pump systems, industrial pumps, and advanced water technology distribution in Indonesia, ensuring every product is authentic and fully supported.">PT Gemilang Tirta Internusa berspesialisasi dalam sistem pompa air industri dan solusi teknologi air distribusi premium di Indonesia. Produk dijamin asli, andal, dan didukung penuh.</p>
         </div>
         <div class="footer-links">
